@@ -1,9 +1,9 @@
-// Здесь вы можите менять цвета а так же тег [SM]
+// Здесь вы можите менять цвета а так же тег
 // Пример выглядеть снизу
 // Если нужна помощь заходи, помогу!
-// https://discord.gg/sR9YAaC
+// https://discord.gg/tWGJnE3DVU
 //
-// CSS цвета - https://hlmod.ru/resources/more-colors.975/
+// CSS цвета - https://hlmod.net/resources/more-colors.975/
 ////////////////////////////////////////////////////////////
 // CSGO цвета ↓
 // {DARKRED} 
@@ -24,138 +24,128 @@
 
 "Phrases"
 {
+	"MCE Prefix"
+	{
+		"en"		"{ORANGE}[MAP]{DARKBLUE}"
+	}
+
 	"Timeleft"
 	{
-		"ru"		"{DARKBLUE}[MCE]{DEFAULT} До конца карты осталось"
-		"en"		"{DARKBLUE}[MCE]{DEFAULT} Time remaining for map: "
-	}
-	
-	"Current Map"
-	{
-		"#format"		"{1:s}"
-		"ru"		"{DARKBLUE}[MCE]{DEFAULT} Текущая карта: {DARKBLUE}{1}{DEFAULT}."
-		"en"		"{DARKBLUE}[MCE]{DEFAULT} The current map is {DARKBLUE}{1}{DEFAULT}."
-	}
-
-	"WinLimitAppend"
-	{
-		"ru"		"{DARKBLUE}[MCE]{DEFAULT} или после победы одной из команд"
-		"en"		"{DARKBLUE}[MCE]{DEFAULT} , or change map after a team wins one round"
-	}
-
-	"WinLimit"
-	{
-		"ru"		"{DARKBLUE}[MCE]{DEFAULT} Карта сменится после победы одной из команд"
-		"en"		"{DARKBLUE}[MCE]{DEFAULT} Map will change after a team wins one round"
-	}
-
-	"MaxRoundsAppend"
-	{
-		"ru"		"{DARKBLUE}[MCE]{DEFAULT} или после следующего раунда"
-		"en"		"{DARKBLUE}[MCE]{DEFAULT} , or change map after one more round"
-	}
-
-	"MaxRounds"
-	{
-		"ru"		"{DARKBLUE}[MCE]{DEFAULT} Карта сменится после следующего раунда"
-		"en"		"{DARKBLUE}[MCE]{DEFAULT} Map will change after one more round"
-	}
-
-	"FragLimitAppend"
-	{
-		"ru"		"{DARKBLUE}[MCE]{DEFAULT} или после первого фрага"
-		"en"		"{DARKBLUE}[MCE]{DEFAULT} , or change map after player reaches one frag"
-	}
-
-	"FragLimit"
-	{
-		"ru"		"{DARKBLUE}[MCE]{DEFAULT} Карта сменится после первого фрага"
-		"en"		"{DARKBLUE}[MCE]{DEFAULT} Map will change after a player reaches one frag"
-	}
-
-	"WinLimitAppendPlural"
-	{
-		"#format"		"{1:i}"
-		"ru"		"{DARKBLUE}[MCE]{DEFAULT} или после {DARKBLUE}{1}{DEFAULT} побед одной из команд"
-		"en"		"{DARKBLUE}[MCE]{DEFAULT} , or change map after a team wins {DARKBLUE}{1}{DEFAULT} rounds"
-	}
-
-	"WinLimitPlural"
-	{
-		"#format"		"{1:i}"
-		"ru"		"{DARKBLUE}[MCE]{DEFAULT} Карта сменится после {DARKBLUE}{1}{DEFAULT} побед одной из команд"
-		"en"		"{DARKBLUE}[MCE]{DEFAULT} Map will change after a team wins {DARKBLUE}{1}{DEFAULT} rounds"
-	}
-
-	"MaxRoundsAppendPlural"
-	{
-		"#format"		"{1:i}"
-		"ru"		"{DARKBLUE}[MCE]{DEFAULT} или через {DARKBLUE}{1}{DEFAULT} раундов"
-		"en"		"{DARKBLUE}[MCE]{DEFAULT} , or change map after {DARKBLUE}{1}{DEFAULT} more rounds"
-	}
-
-	"MaxRoundsPlural"
-	{
-		"#format"		"{1:i}"
-		"ru"		"{DARKBLUE}[MCE]{DEFAULT} Карта сменится через {DARKBLUE}{1}{DEFAULT} раундов"
-		"en"		"{DARKBLUE}[MCE]{DEFAULT} Map will change after {DARKBLUE}{1}{DEFAULT} more rounds"
-	}
-
-	"FragLimitAppendPlural"
-	{
-		"#format"		"{1:i}"
-		"ru"		"{DARKBLUE}[MCE]{DEFAULT} или когда один из игроков наберет {DARKBLUE}{1}{DEFAULT} фрагов"
-		"en"		"{DARKBLUE}[MCE]{DEFAULT} , or change map after player reaches {DARKBLUE}{1}{DEFAULT} frags"
-	}
-
-	"FragLimitPlural"
-	{
-		"#format"		"{1:i}"
-		"ru"		"{DARKBLUE}[MCE]{DEFAULT} Карта сменится когда один из игроков наберет {DARKBLUE}{1}{DEFAULT} фрагов"
-		"en"		"{DARKBLUE}[MCE]{DEFAULT} Map will change after a player reaches {DARKBLUE}{1}{DEFAULT} frags"
-	}
-
-	"LastRound"
-	{
-		"ru"		"{DARKBLUE}[MCE]{DEFAULT} Это последний раунд!"
-		"en"		"{DARKBLUE}[MCE]{DEFAULT} This is the last round!!"
-	}
-
-	"NoTimelimit"
-	{
-		"ru"		"{DARKBLUE}[MCE]{DEFAULT} Карта не имеет ограничения по времени"
-		"en"		"{DARKBLUE}[MCE]{DEFAULT} No timelimit for map"
-	}
-
-	"Next Map"
-	{
-		"#format"		"{1:s}"
-		"ru"		"{DARKBLUE}[MCE]{DEFAULT} Следующая карта: {DARKBLUE}{1}"
-		"en"		"{DARKBLUE}[MCE]{DEFAULT} Next Map: {DARKBLUE}{1}"
-	}
-
-	"Pending Vote"
-	{
-		"ru"		"{DARKBLUE}[MCE]{DEFAULT} Определится голосованием"
-		"en"		"{DARKBLUE}[MCE]{DEFAULT} Pending Vote"
+		"en"		"Time remaining for map: {ORANGE}"
 	}
 	
 	"Thetime"
 	{
 		"#format"		"{1:s}"	
-		"ru"		"[SM] Текущее время сервера {DARKBLUE}{1}"
-		"en"		"[SM] The current server time is {DARKBLUE}{1}"
+		"en"		"The current server time is {ORANGE}{1}"
 	}
 	
 	"Friendly Fire On"
 	{
-		"ru"		"[SM] Огонь по своим включен"
-		"en"		"[SM] Friendly Fire is enabled."
+		"en"		"Friendly Fire is enabled."
 	}
 	
 	"Friendly Fire Off"
 	{
-		"ru"		"[SM] Огонь по своим отключен"
-		"en"		"[SM] Friendly Fire is disabled."
+		"en"		"Friendly Fire is disabled."
+	}
+
+	"Friendly Fire Percent"
+	{
+		"#format"	"{1:0.0f}"
+		"en"		"Friendly Fire is {ORANGE}{1}%."
+	}
+
+	"Current Map"
+	{
+		"#format"		"{1:s}"
+		"en"		"The current map is {ORANGE}{1}."
+	}
+
+	"WinLimitAppend"
+	{
+		"en"		", or change map after a team wins {ORANGE}one{DARKBLUE} round"
+	}
+
+	"WinLimit"
+	{
+		"en"		"Map will change after a team wins {ORANGE}one{DARKBLUE} round"
+	}
+
+	"MaxRoundsAppend"
+	{
+		"en"		", or change map after {ORANGE}one{DARKBLUE} more round"
+	}
+
+	"MaxRounds"
+	{
+		"en"		"Map will change after {ORANGE}one{DARKBLUE} more round"
+	}
+
+	"FragLimitAppend"
+	{
+		"en"		", or change map after player reaches {ORANGE}one{DARKBLUE} frag"
+	}
+
+	"FragLimit"
+	{
+		"en"		"Map will change after a player reaches {ORANGE}one{DARKBLUE} frag"
+	}
+
+	"WinLimitAppendPlural"
+	{
+		"#format"		"{1:i}"
+		"en"		", or change map after a team wins {ORANGE}{1}{DARKBLUE} rounds"
+	}
+
+	"WinLimitPlural"
+	{
+		"#format"		"{1:i}"
+		"en"		"Map will change after a team wins {ORANGE}{1}{DARKBLUE} rounds"
+	}
+
+	"MaxRoundsAppendPlural"
+	{
+		"#format"		"{1:i}"
+		"en"		", or change map after {ORANGE}{1}{DARKBLUE} more rounds"
+	}
+
+	"MaxRoundsPlural"
+	{
+		"#format"		"{1:i}"
+		"en"		"Map will change after {ORANGE}{1}{DARKBLUE} more rounds"
+	}
+
+	"FragLimitAppendPlural"
+	{
+		"#format"		"{1:i}"
+		"en"		", or change map after player reaches {ORANGE}{1}{DARKBLUE} frags"
+	}
+
+	"FragLimitPlural"
+	{
+		"#format"		"{1:i}"
+		"en"		"Map will change after a player reaches {ORANGE}{1}{DARKBLUE} frags"
+	}
+
+	"LastRound"
+	{
+		"en"		"{ORANGE}This is the last round!!"
+	}
+
+	"NoTimelimit"
+	{
+		"en"		"No timelimit for map"
+	}
+
+	"Next Map"
+	{
+		"#format"		"{1:s}"
+		"en"		"Next Map: {ORANGE}{1}"
+	}
+
+	"Pending Vote"
+	{
+		"en"		"Pending Vote"
 	}
 }

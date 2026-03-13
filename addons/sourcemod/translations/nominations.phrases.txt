@@ -1,9 +1,9 @@
-// Здесь вы можите менять цвета а так же тег [SM]
+// Здесь вы можите менять цвета а так же тег
 // Пример выглядеть снизу
 // Если нужна помощь заходи, помогу!
-// https://discord.gg/sR9YAaC
+// https://discord.gg/tWGJnE3DVU
 //
-// CSS цвета - https://hlmod.ru/resources/more-colors.975/
+// CSS цвета - https://hlmod.net/resources/more-colors.975/
 ////////////////////////////////////////////////////////////
 // CSGO цвета ↓
 // {DARKRED} 
@@ -39,15 +39,15 @@
 	"Map Already In Vote"
 	{
 		"#format"		"{1:s}"
-		"ru"			"Карта {DARKBLUE}'{1}'{DEFAULT} уже предложена для голосования"
-		"en"			"Map {DARKBLUE}'{1}'{DEFAULT} already in the nominations list."
+		"ru"			"Карта {ORANGE}'{1}'{DARKBLUE} уже предложена для голосования"
+		"en"			"Map {ORANGE}'{1}'{DARKBLUE} already in the nominations list."
 	}
 
 	"Map Inserted"
 	{
 		"#format"		"{1:s}"
-		"ru"			"Карта {DARKBLUE}'{1}'{DEFAULT} предложена для голосования"
-		"en"			"Map {DARKBLUE}'{1}'{DEFAULT} added to the nominations list."
+		"ru"			"Карта {ORANGE}'{1}'{DARKBLUE} предложена для голосования"
+		"en"			"Map {ORANGE}'{1}'{DARKBLUE} added to the nominations list."
 	}
 	
 	"Map Already Nominated"
@@ -59,15 +59,15 @@
 	"Map Nominated"
 	{
 		"#format"		"{1:s},{2:s}"
-		"ru"			"{DARKBLUE}{1}{DEFAULT} предложил карту {DARKBLUE}'{2}'{DEFAULT}"
-		"en"			"{DARKBLUE}{1}{DEFAULT} has nominated {DARKBLUE}{2}{DEFAULT}."
+		"ru"			"{ORANGE}{1}{DARKBLUE} предложил карту {ORANGE}'{2}'{DARKBLUE}"
+		"en"			"{ORANGE}{1}{DARKBLUE} has nominated {ORANGE}{2}{DARKBLUE}."
 	}
 
 	"Map Nomination Changed"
 	{
 		"#format"		"{1:s},{2:s}"
-		"ru"			"{DARKBLUE}{1}{DEFAULT} предложил другую карту - {DARKBLUE}'{2}'{DEFAULT}."
-		"en"			"{DARKBLUE}{1}{DEFAULT} has changed their nomination to {DARKBLUE}{2}{DEFAULT}."
+		"ru"			"{ORANGE}{1}{DARKBLUE} предложил другую карту - {ORANGE}'{2}'{DARKBLUE}."
+		"en"			"{ORANGE}{1}{DARKBLUE} has changed their nomination to {ORANGE}{2}{DARKBLUE}."
 	}
 
 	"Can't Nominate Current Map"

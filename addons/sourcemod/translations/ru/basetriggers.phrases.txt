@@ -1,0 +1,151 @@
+// Здесь вы можите менять цвета а так же тег [SM]
+// Пример выглядеть снизу
+// Если нужна помощь заходи, помогу!
+// https://discord.gg/sR9YAaC
+//
+// CSS цвета - https://hlmod.net/resources/more-colors.975/
+////////////////////////////////////////////////////////////
+// CSGO цвета ↓
+// {DARKRED} 
+// {LIGHTRED} 
+// {ORANGE} 
+// {YELLOW} 
+// {OLIVE} 
+// {LIGHTGREEN} 
+// {LIME} 
+// {GREEN} 
+// {DEFAULT} 
+// {GREY} 
+// {BLUEGREY} 
+// {BLUE} 
+// {LIGHTBLUE} 
+// {DARKBLUE} 
+// {ORCHID}
+
+"Phrases"
+{
+	"MCE Prefix"
+	{
+		"ru"		"{ORANGE}[MAP]{DARKBLUE}"
+	}
+
+	"Timeleft"
+	{
+		"ru"		"Осталось времени на карте: {ORANGE}"
+	}
+	
+	"Thetime"
+	{
+		"#format"		"{1:s}"	
+		"ru"		"Текущее время сервера: {ORANGE}{1}"
+	}
+	
+	"Friendly Fire On"
+	{
+		"ru"		"Дружелюбный огонь включён."
+	}
+	
+	"Friendly Fire Off"
+	{
+		"ru"		"Дружелюбный огонь отключён."
+	}
+
+	"Friendly Fire Percent"
+	{
+		"#format"	"{1:0.0f}"
+		"ru"		"Дружелюбный огонь {ORANGE}{1}%."
+	}
+
+	"Current Map"
+	{
+		"#format"		"{1:s}"
+		"ru"		"Текущая карта: {ORANGE}{1}."
+	}
+
+	"WinLimitAppend"
+	{
+		"ru"		", или сменится карта после того, как команда выиграет {ORANGE}один{DARKBLUE} раунд"
+	}
+
+	"WinLimit"
+	{
+		"ru"		"Карта сменится после того, как команда выиграет {ORANGE}один{DARKBLUE} раунд"
+	}
+
+	"MaxRoundsAppend"
+	{
+		"ru"		", или сменится карта после ещё {ORANGE}одного{DARKBLUE} раунда"
+	}
+
+	"MaxRounds"
+	{
+		"ru"		"Карта сменится после ещё {ORANGE}одного{DARKBLUE} раунда"
+	}
+
+	"FragLimitAppend"
+	{
+		"ru"		", или сменится карта после того, как игрок наберёт {ORANGE}один{DARKBLUE} фраг"
+	}
+
+	"FragLimit"
+	{
+		"ru"		"Карта сменится после того, как игрок наберёт {ORANGE}один{DARKBLUE} фраг"
+	}
+
+	"WinLimitAppendPlural"
+	{
+		"#format"		"{1:i}"
+		"ru"		", или сменится карта после того, как команда выиграет {ORANGE}{1}{DARKBLUE} раундов"
+	}
+
+	"WinLimitPlural"
+	{
+		"#format"		"{1:i}"
+		"ru"		"Карта сменится после того, как команда выиграет {ORANGE}{1}{DARKBLUE} раундов"
+	}
+
+	"MaxRoundsAppendPlural"
+	{
+		"#format"		"{1:i}"
+		"ru"		", или сменится карта после {ORANGE}{1}{DARKBLUE} следующих раундов"
+	}
+
+	"MaxRoundsPlural"
+	{
+		"#format"		"{1:i}"
+		"ru"		"Карта сменится после {ORANGE}{1}{DARKBLUE} следующих раундов"
+	}
+
+	"FragLimitAppendPlural"
+	{
+		"#format"		"{1:i}"
+		"ru"		", или сменится карта после того, как игрок наберёт {ORANGE}{1}{DARKBLUE} фрагов"
+	}
+
+	"FragLimitPlural"
+	{
+		"#format"		"{1:i}"
+		"ru"		"Карта сменится после того, как игрок наберёт {ORANGE}{1}{DARKBLUE} фрагов"
+	}
+
+	"LastRound"
+	{
+		"ru"		"{ORANGE}Это последний раунд!!"
+	}
+
+	"NoTimelimit"
+	{
+		"ru"		"На этой карте нет ограничения по времени"
+	}
+
+	"Next Map"
+	{
+		"#format"		"{1:s}"
+		"ru"		"Следующая карта: {ORANGE}{1}"
+	}
+
+	"Pending Vote"
+	{
+		"ru"		"Голосование в процессе"
+	}
+}

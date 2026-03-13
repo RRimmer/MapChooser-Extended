@@ -1,9 +1,9 @@
-// Здесь вы можите менять цвета а так же тег [SM]
+// Здесь вы можите менять цвета а так же тег
 // Пример выглядеть снизу
 // Если нужна помощь заходи, помогу!
-// https://discord.gg/sR9YAaC
+// https://discord.gg/tWGJnE3DVU
 //
-// CSS цвета - https://hlmod.ru/resources/more-colors.975/
+// CSS цвета - https://hlmod.net/resources/more-colors.975/
 ////////////////////////////////////////////////////////////
 // CSGO цвета ↓
 // {DARKRED} 
@@ -33,29 +33,29 @@
 	"Nextmap Voting Finished"
 	{
 		"#format"		"{1:s},{2:i},{3:i}"
-		"ru"			"Голосование за карту завершено. Следующей картой будет: {DARKBLUE}{1}{DEFAULT}. (Получено {DARKBLUE}{2}%%{DEFAULT} из {DARKBLUE}{3}{DEFAULT} голосов(а))"
-		"en"			"Map voting has finished. The next map will be {DARKBLUE}{1}{DEFAULT}. (Received {DARKBLUE}{2}{DEFAULT}%% of {DARKBLUE}{3}{DEFAULT} votes)"
+		"ru"			"Голосование за карту завершено. Следующей картой будет: {ORANGE}{1}{DARKBLUE}. (Получено {ORANGE}{2}%%{DARKBLUE} из {ORANGE}{3}{DARKBLUE} голосов(а))"
+		"en"			"Map voting has finished. The next map will be {ORANGE}{1}{DARKBLUE}. (Received {ORANGE}{2}{DARKBLUE}%% of {ORANGE}{3}{DARKBLUE} votes)"
 	}
 
 	"Current Map Extended"
 	{
 		"#format"		"{1:i},{2:i}"
-		"ru"			"Текущая карта была продлена. (Получено {DARKBLUE}{1}%%{DEFAULT} из {DARKBLUE}{2}{DEFAULT} голосов(а))"
-		"en"			"The current map has been extended. (Received {DARKBLUE}{1}%%{DEFAULT} of {DARKBLUE}{2}{DEFAULT} votes)"
+		"ru"			"Текущая карта была продлена. (Получено {ORANGE}{1}%%{DARKBLUE} из {ORANGE}{2}{DARKBLUE} голосов(а))"
+		"en"			"The current map has been extended. (Received {ORANGE}{1}%%{DARKBLUE} of {ORANGE}{2}{DARKBLUE} votes)"
 	}
 
 	"Current Map Stays"
 	{
 		"#format"		"{1:i},{2:i}"
-		"ru"			"Текущая карта не сменится! (Получено {DARKBLUE}{1}%%{DEFAULT} из {DARKBLUE}{2}{DEFAULT} голосов(а))"
-		"en"			"Current map continues! The Vote has spoken! (Received {DARKBLUE}{1}%%{DEFAULT} of {DARKBLUE}{2}{DEFAULT} votes)"
+		"ru"			"Текущая карта не сменится! (Получено {ORANGE}{1}%%{DARKBLUE} из {ORANGE}{2}{DARKBLUE} голосов(а))"
+		"en"			"Current map continues! The Vote has spoken! (Received {ORANGE}{1}%%{DARKBLUE} of {ORANGE}{2}{DARKBLUE} votes)"
 	}
 
 	"Changed Next Map"
 	{
 		"#format"		"{1:s}"
-		"ru"			"Следующая карта изменена на {DARKBLUE}\"{1}\"{DEFAULT}."	
-		"en"			"Changed nextmap to {DARKBLUE}\"{1}\"{DEFAULT}."	
+		"ru"			"Следующая карта изменена на {ORANGE}\"{1}\"{DARKBLUE}."	
+		"en"			"Changed nextmap to {ORANGE}\"{1}\"{DARKBLUE}."	
 	}
 
 	"Number Of Votes"
@@ -67,8 +67,8 @@
 	"Revote Is Needed"
 	{
 		"#format"		"{1:i}"
-		"ru"			"Ни одна карта не получила более, чем {DARKBLUE}{1}%%{DEFAULT} голосов(а).\nИтак, какая карта будет следующей? Приготовьтесь к повторному голосованию!"
-		"en"			"No map has received more than {DARKBLUE}{1}%%{DEFAULT} of the vote.\nSo, which map will win? A revote is needed!"
+		"ru"			"Ни одна карта не получила более, чем {ORANGE}{1}%%{DARKBLUE} голосов(а).\nИтак, какая карта будет следующей? Приготовьтесь к повторному голосованию!"
+		"en"			"No map has received more than {ORANGE}{1}%%{DARKBLUE} of the vote.\nSo, which map will win? A revote is needed!"
 	}
 ///////////////////////////////////// ↓ НЕ ДОБАВЛЯТЬ ЦВЕТА! ↓ /////////////////////////////////////
 //////////////////////////////////////////// ↓ Меню ↓ ////////////////////////////////////////////

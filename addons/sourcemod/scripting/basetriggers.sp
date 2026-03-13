@@ -34,10 +34,10 @@
 #pragma semicolon 1
 
 #include <sourcemod>
+#include <multicolors>
 
 #undef REQUIRE_PLUGIN
 #include <mapchooser>
-#include <multicolors>
 #define REQUIRE_PLUGIN
 
 #pragma newdecls required
@@ -61,32 +61,61 @@ ConVar g_Cvar_WinLimit;
 ConVar g_Cvar_FragLimit;
 ConVar g_Cvar_MaxRounds;
 
-#define TIMELEFT_ALL_ALWAYS		0		/* Print to all players */
-#define TIMELEFT_ALL_MAYBE		1		/* Print to all players if sm_trigger_show allows */
-#define TIMELEFT_ONE			2		/* Print to a single player */
+#define PRINT_TO_ALL_ALWAYS		0		/* Print to all players */
+#define PRINT_TO_ALL_MAYBE		1		/* Print to all players if sm_trigger_show allows */
+#define PRINT_TO_ONE			2		/* Print to a single player */
 
 bool mapchooser;
+bool doNextmap;
 
 int g_TotalRounds;
+
+/* Prefix used by multicolors for all chat messages */
+char g_sPrefixMCE[PREFIX_MAX_LENGTH];
+
+EngineVersion g_GameEngine = Engine_Unknown;
+
 
 public void OnPluginStart()
 {
 	LoadTranslations("common.phrases");
 	LoadTranslations("basetriggers.phrases");
-	
+
+	LoadChatPrefix();
+	CSetPrefix(g_sPrefixMCE);
+
+	g_GameEngine = GetEngineVersion();
+
 	g_Cvar_TriggerShow = CreateConVar("sm_trigger_show", "0", "Display triggers message to all players? (0 off, 1 on, def. 0)", 0, true, 0.0, true, 1.0);	
 	g_Cvar_TimeleftInterval = CreateConVar("sm_timeleft_interval", "0.0", "Display timeleft every x seconds. Default 0.", 0, true, 0.0, true, 1800.0);
-	g_Cvar_FriendlyFire = FindConVar("mp_friendlyfire");
-	
-	RegConsoleCmd("timeleft", Command_Timeleft);
-	RegConsoleCmd("nextmap", Command_Nextmap);
-	RegConsoleCmd("motd", Command_Motd);
-	RegConsoleCmd("ff", Command_FriendlyFire);
-	
-	g_Cvar_TimeleftInterval.AddChangeHook(ConVarChange_TimeleftInterval);
+
+	if (g_GameEngine == Engine_Left4Dead || g_GameEngine == Engine_Left4Dead2)
+	{
+		g_Cvar_FriendlyFire = FindConVar("z_difficulty");
+	}
+	else
+	{
+		g_Cvar_FriendlyFire = FindConVar("mp_friendlyfire");
+	}
 
 	char folder[64];   	 
 	GetGameFolderName(folder, sizeof(folder));
+
+	if (strcmp(folder, "dystopia") == 0)
+	{
+		doNextmap = false;
+	}
+	else
+	{
+		RegConsoleCmd("nextmap", Command_Nextmap);
+		doNextmap = true;
+	}
+
+	RegConsoleCmd("timeleft", Command_Timeleft);
+	RegConsoleCmd("motd", Command_Motd);
+	RegConsoleCmd("ff", Command_FriendlyFire);
+
+	g_Cvar_TimeleftInterval.AddChangeHook(ConVarChange_TimeleftInterval);
 
 	if (strcmp(folder, "insurgency") == 0)
 	{
@@ -115,6 +144,16 @@ public void OnPluginStart()
 	g_Cvar_MaxRounds = FindConVar("mp_maxrounds");
 	
 	mapchooser = LibraryExists("mapchooser");
+}
+
+stock void LoadChatPrefix()
+{
+	/* Loads the prefix used for all chat messages. The phrase is configurable in translations. */
+	Format(g_sPrefixMCE, sizeof(g_sPrefixMCE), "%t", "MCE Prefix");
+	if (g_sPrefixMCE[0] == '\0' || StrEqual(g_sPrefixMCE, "MCE Prefix", false))
+	{
+		strcopy(g_sPrefixMCE, sizeof(g_sPrefixMCE), "[MCE]");
+	}
 }
 
 public void OnMapStart()
@@ -189,12 +228,14 @@ public void ConVarChange_TimeleftInterval(ConVar convar, const char[] oldValue, 
 
 public Action Timer_DisplayTimeleft(Handle timer)
 {
-	ShowTimeLeft(0, TIMELEFT_ALL_ALWAYS);	
+	ShowTimeLeft(0, PRINT_TO_ALL_ALWAYS);	
+
+	return Plugin_Continue;
 }
 
 public Action Command_Timeleft(int client, int args)
 {
-	ShowTimeLeft(client, TIMELEFT_ONE);
+	ShowTimeLeft(client, PRINT_TO_ONE);
 	
 	return Plugin_Handled;
 }
@@ -210,12 +251,12 @@ public Action Command_Nextmap(int client, int args)
 	
 	if (mapchooser && EndOfMapVoteEnabled() && !HasEndOfMapVoteFinished())
 	{
-		CReplyToCommand(client, " %t", "Pending Vote");			
+		CReplyToCommand(client, "%t", "Pending Vote");
 	}
 	else
 	{
 		GetMapDisplayName(map, map, sizeof(map));
-		CReplyToCommand(client, " %t", "Next Map", map);
+		CReplyToCommand(client, "%t", "Next Map", map);
 	}
 	
 	return Plugin_Handled;
@@ -225,7 +266,7 @@ public Action Command_Motd(int client, int args)
 {
 	if (client == 0)
 	{
-		CReplyToCommand(client, " %t", "Command is in-game only");
+		CReplyToCommand(client, "%t", "Command is in-game only");
 		return Plugin_Handled;
 	}
 
@@ -239,16 +280,7 @@ public Action Command_Motd(int client, int args)
 
 public Action Command_FriendlyFire(int client, int args)
 {
-	if (client == 0)
-	{
-		CReplyToCommand(client, " %t", "Command is in-game only");
-		return Plugin_Handled;
-	}
-
-	if (!IsClientInGame(client))
-		return Plugin_Handled;
-	
-	ShowFriendlyFire(client);
+	ShowFriendlyFire(client, PRINT_TO_ONE);
 
 	return Plugin_Handled;
 }
@@ -260,7 +292,7 @@ public void OnClientSayCommand_Post(int client, const char[] command, const char
 	}
 	else if (strcmp(sArgs, "timeleft", false) == 0)
 	{
-		ShowTimeLeft(client, TIMELEFT_ALL_MAYBE);
+		ShowTimeLeft(client, PRINT_TO_ALL_MAYBE);
 	}
 	else if (strcmp(sArgs, "thetime", false) == 0)
 	{
@@ -269,32 +301,32 @@ public void OnClientSayCommand_Post(int client, const char[] command, const char
 		
 		if (g_Cvar_TriggerShow.IntValue)
 		{
-			CPrintToChatAll(" %t", "Thetime", ctime);
+			CPrintToChatAll("%t", "Thetime", ctime);
 		}
 		else
 		{
-			CPrintToChat(client," %t", "Thetime", ctime);
+			CPrintToChat(client,"%t", "Thetime", ctime);
 		}
 	}
 	else if (strcmp(sArgs, "ff", false) == 0)
 	{
-		ShowFriendlyFire(client);
+		ShowFriendlyFire(client, PRINT_TO_ALL_MAYBE);
 	}
 	else if (strcmp(sArgs, "currentmap", false) == 0)
 	{
-		char map[64];
+		char map[PLATFORM_MAX_PATH];
 		GetCurrentMap(map, sizeof(map));
-		
+		GetMapDisplayName(map, map, sizeof(map));
 		if (g_Cvar_TriggerShow.IntValue)
 		{
-			CPrintToChatAll(" %t", "Current Map", map);
+			CPrintToChatAll("%t", "Current Map", map);
 		}
 		else
 		{
-			CPrintToChat(client," %t", "Current Map", map);
+			CPrintToChat(client,"%t", "Current Map", map);
 		}
 	}
-	else if (strcmp(sArgs, "nextmap", false) == 0)
+	else if (strcmp(sArgs, "nextmap", false) == 0 && doNextmap)
 	{
 		char map[PLATFORM_MAX_PATH];
 		GetNextMap(map, sizeof(map));
@@ -304,22 +336,22 @@ public void OnClientSayCommand_Post(int client, const char[] command, const char
 		{
 			if (mapchooser && EndOfMapVoteEnabled() && !HasEndOfMapVoteFinished())
 			{
-				CPrintToChatAll(" %t", "Pending Vote");			
+				CPrintToChatAll("%t", "Pending Vote");
 			}
 			else
 			{
-				CPrintToChatAll(" %t", "Next Map", map);
+				CPrintToChatAll("%t", "Next Map", map);
 			}
 		}
 		else
 		{
 			if (mapchooser && EndOfMapVoteEnabled() && !HasEndOfMapVoteFinished())
 			{
-				CPrintToChat(client, " %t", "Pending Vote");			
+				CPrintToChat(client, "%t", "Pending Vote");
 			}
 			else
 			{
-				CPrintToChat(client, " %t", "Next Map", map);
+				CPrintToChat(client, "%t", "Next Map", map);
 			}
 		}
 	}
@@ -337,8 +369,8 @@ void ShowTimeLeft(int client, int who)
 	
 	char finalOutput[1024];
 	
-	if (who == TIMELEFT_ALL_ALWAYS
-		|| (who == TIMELEFT_ALL_MAYBE && g_Cvar_TriggerShow.IntValue))
+	if (who == PRINT_TO_ALL_ALWAYS
+		|| (who == PRINT_TO_ALL_MAYBE && g_Cvar_TriggerShow.IntValue))
 	{
 		client = 0;	
 	}
@@ -492,26 +524,72 @@ void ShowTimeLeft(int client, int who)
 		FormatEx(finalOutput, sizeof(finalOutput), "%T", "NoTimelimit", client);
 	}
 
-	if (who == TIMELEFT_ALL_ALWAYS
-		|| (who == TIMELEFT_ALL_MAYBE && g_Cvar_TriggerShow.IntValue))
+	if (who == PRINT_TO_ALL_ALWAYS
+		|| (who == PRINT_TO_ALL_MAYBE && g_Cvar_TriggerShow.IntValue))
 	{
-		CPrintToChatAll(" %s", finalOutput);
+		CPrintToChatAll("%s", finalOutput);
 	}
 	else if (client != 0 && IsClientInGame(client))
 	{
-		CPrintToChat(client, " %s", finalOutput);
+		CPrintToChat(client, "%s", finalOutput);
 	}
 	
 	if (client == 0)
 	{
-		PrintToServer(" %s", finalOutput);
+		CPrintToServer("%s", finalOutput);
 	}
 }
 
-void ShowFriendlyFire(int client)
+void ShowFriendlyFire(int client, int who)
 {
 	if (g_Cvar_FriendlyFire)
 	{
+		if (g_GameEngine == Engine_Left4Dead || g_GameEngine == Engine_Left4Dead2)
+		{
+			char buffer[50];
+			g_Cvar_FriendlyFire.GetString(buffer, sizeof(buffer)); // z_difficulty
+			
+			// Easy, Normal, Hard, Impossible
+			if (StrEqual(buffer, "easy", false)
+				|| StrEqual(buffer, "normal", false)
+				|| StrEqual(buffer, "hard", false))
+			{
+				Format(buffer, sizeof(buffer), "survivor_friendly_fire_factor_%s", buffer);
+			}
+			else if (StrEqual(buffer, "impossible", false))
+			{
+				Format(buffer, sizeof(buffer), "survivor_friendly_fire_factor_expert");
+			}
+			else // L4D2 game not fix cvar value to one of difficult levels, like L4D
+			{
+				Format(buffer, sizeof(buffer), "survivor_friendly_fire_factor_normal");
+			}
+
+			ConVar ff_factor = FindConVar(buffer);
+			
+			if(ff_factor)
+			{
+				float percent = ff_factor.FloatValue * 100.0;
+
+				if (who == PRINT_TO_ALL_ALWAYS
+					|| (who == PRINT_TO_ALL_MAYBE && g_Cvar_TriggerShow.IntValue))
+				{
+					CPrintToChatAll("%t", "Friendly Fire Percent", percent);
+				}
+				else if (client != 0 && IsClientInGame(client))
+				{
+					CPrintToChat(client,"%t", "Friendly Fire Percent", percent);
+				}
+
+				if (client == 0)
+				{
+					CPrintToServer("%T", "Friendly Fire Percent", client, percent);
+				}
+			}
+
+			return;
+		}
+
 		char phrase[24];
 		if (g_Cvar_FriendlyFire.BoolValue)
 		{
@@ -521,14 +599,21 @@ void ShowFriendlyFire(int client)
 		{
 			strcopy(phrase, sizeof(phrase), "Friendly Fire Off");
 		}
-	
-		if (g_Cvar_TriggerShow.IntValue)
+		
+		if (who == PRINT_TO_ALL_ALWAYS
+			|| (who == PRINT_TO_ALL_MAYBE && g_Cvar_TriggerShow.IntValue))
 		{
-			CPrintToChatAll(" %t", phrase);
+			client = 0;
+			CPrintToChatAll("%t", phrase);
 		}
-		else
+		else if (client != 0 && IsClientInGame(client))
 		{
-			CPrintToChat(client," %t", phrase);
+			CPrintToChat(client, "%t", phrase);
+		}
+
+		if (client == 0)
+		{
+			CPrintToServer("%T", phrase, client);
 		}
 	}
 }
