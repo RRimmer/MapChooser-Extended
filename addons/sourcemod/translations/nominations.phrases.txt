@@ -1,0 +1,109 @@
+// Здесь вы можите менять цвета а так же тег [SM]
+// Пример выглядеть снизу
+// Если нужна помощь заходи, помогу!
+// https://discord.gg/sR9YAaC
+//
+// CSS цвета - https://hlmod.ru/resources/more-colors.975/
+////////////////////////////////////////////////////////////
+// CSGO цвета ↓
+// {DARKRED} 
+// {LIGHTRED} 
+// {ORANGE} 
+// {YELLOW} 
+// {OLIVE} 
+// {LIGHTGREEN} 
+// {LIME} 
+// {GREEN} 
+// {DEFAULT} 
+// {GREY} 
+// {BLUEGREY} 
+// {BLUE} 
+// {LIGHTBLUE} 
+// {DARKBLUE} 
+// {ORCHID}
+
+"Phrases"
+{
+	"Already Nominated"
+	{
+		"ru"			"Вы уже предложили карты для голосования"
+		"en"			"You have already nominated a map."
+	}
+	
+	"Max Nominations"
+	{
+		"ru"			"Уже предложено максимальное количество карт для голосования"
+		"en"			"The maximum allowed nominations has been reached."
+	}
+
+	"Map Already In Vote"
+	{
+		"#format"		"{1:s}"
+		"ru"			"Карта {DARKBLUE}'{1}'{DEFAULT} уже предложена для голосования"
+		"en"			"Map {DARKBLUE}'{1}'{DEFAULT} already in the nominations list."
+	}
+
+	"Map Inserted"
+	{
+		"#format"		"{1:s}"
+		"ru"			"Карта {DARKBLUE}'{1}'{DEFAULT} предложена для голосования"
+		"en"			"Map {DARKBLUE}'{1}'{DEFAULT} added to the nominations list."
+	}
+	
+	"Map Already Nominated"
+	{
+		"ru"			"Выбранная вами карта уже предложена для голосования"
+		"en"			"The map you chose has already been nominated."
+	}
+	
+	"Map Nominated"
+	{
+		"#format"		"{1:s},{2:s}"
+		"ru"			"{DARKBLUE}{1}{DEFAULT} предложил карту {DARKBLUE}'{2}'{DEFAULT}"
+		"en"			"{DARKBLUE}{1}{DEFAULT} has nominated {DARKBLUE}{2}{DEFAULT}."
+	}
+
+	"Map Nomination Changed"
+	{
+		"#format"		"{1:s},{2:s}"
+		"ru"			"{DARKBLUE}{1}{DEFAULT} предложил другую карту - {DARKBLUE}'{2}'{DEFAULT}."
+		"en"			"{DARKBLUE}{1}{DEFAULT} has changed their nomination to {DARKBLUE}{2}{DEFAULT}."
+	}
+
+	"Can't Nominate Current Map"
+	{
+		"ru"			"Текущая карта не может быть предложена для голосования"
+		"en"			"The map you chose is the current map and cannot be nominated"
+	}
+
+	"Map in Exclude List"
+	{
+		"ru"			"Выбранная вами карта недавно игралась и не может быть предложена для голосования"
+		"en"			"The map you chose was recently played and cannot be nominated"
+	}
+///////////////////////////////////// ↓ НЕ ДОБАВЛЯТЬ ЦВЕТА! ↓ /////////////////////////////////////
+//////////////////////////////////////////// ↓ Меню ↓ ////////////////////////////////////////////
+	"Nominate Title"
+	{
+		"ru"			"Предложите карту для голосования"
+		"en"			"Nominate Map:"
+	}
+
+	"Current Map"
+	{
+		"ru"			"Текущая карта"
+		"en"			"Current Map"
+	}
+
+	"Recently Played"
+	{
+		"ru"			"Недавно игралась"
+		"en"			"Recently Played"
+	}
+
+	"Nominated"
+	{
+		"ru"			"Предложена"
+		"en"			"Nominated"
+	}
+}

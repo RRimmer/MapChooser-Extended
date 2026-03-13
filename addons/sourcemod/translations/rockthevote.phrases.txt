@@ -1,0 +1,109 @@
+// Здесь вы можите менять цвета а так же тег [SM]
+// Пример выглядеть снизу
+// Если нужна помощь заходи, помогу!
+// https://discord.gg/sR9YAaC
+//
+// CSS цвета - https://hlmod.ru/resources/more-colors.975/
+////////////////////////////////////////////////////////////
+// CSGO цвета ↓
+// {DARKRED} 
+// {LIGHTRED} 
+// {ORANGE} 
+// {YELLOW} 
+// {OLIVE} 
+// {LIGHTGREEN} 
+// {LIME} 
+// {GREEN} 
+// {DEFAULT} 
+// {GREY} 
+// {BLUEGREY} 
+// {BLUE} 
+// {LIGHTBLUE} 
+// {DARKBLUE} 
+// {ORCHID}
+
+"Phrases"
+{
+	"Rock The Vote"
+	{
+		"ru"			"Голосование за смену карты:"
+		"en"			"Rock The Vote:"
+	}
+	
+	"RTV Not Allowed"
+	{
+		"ru"			"Голосование за смену карты еще недоступно."
+		"en"			"Rock the Vote is not allowed yet."
+	}	
+		
+	"RTV Started"
+	{	
+		"ru"			"Голосование за смену карты уже началось."
+		"en"			"Rock the Vote has already started."
+	}
+
+	"RTV Ended"
+	{
+		"ru"			"Голосование уже завершено, нельзя запустить его снова или предложить карту."
+		"en"			"RTV has already ended, you cannot start it again or nominate maps."
+	}
+	
+	"Already Voted"
+	{
+ 		"#format"		"{1:d},{2:d}"
+		"ru"			"Вы уже проголосовали за смену карты. ({DARKBLUE}{1}{DEFAULT} голосов из {DARKBLUE}{2}{DEFAULT} необходимых)"
+	 	"en"			"You have already voted to Rock the Vote. ({DARKBLUE}{1}{DEFAULT} votes, {DARKBLUE}{2}{DEFAULT} required)"
+	}
+	
+	"Minimal Players Not Met"
+	{
+		"ru"			"Не набрано минимальное количество необходимых игроков."
+		"en"			"The minimal number of players required has not been met."
+	}
+	
+	"RTV Requested"
+	{
+		"#format"		"{1:s},{2:d},{3:d}"
+		"ru"			"Игрок {DARKBLUE}{1}{DEFAULT} хочет сменить карту. ({DARKBLUE}{2}{DEFAULT} голосов из {DARKBLUE}{3}{DEFAULT} необходимых)"
+		"en"			"{DARKBLUE}{1}{DEFAULT} wants to rock the vote. ({DARKBLUE}{2}{DEFAULT} votes, {DARKBLUE}{3}{DEFAULT} required)"
+	}
+	
+	"RTV Vote Ready"
+	{
+		"ru"			"Голосование за смену карты!"
+		"en"			"Rocking the Vote!"
+
+	}
+	
+	"Don't Change"
+	{
+		"ru"			"Оставить текущую карту"
+		"en"			"Keep Current Map"
+	}
+	
+	"Selected Map"
+	{
+		"#format"		"{1:s},{2:s}"
+		"ru"			"Игрок {DARKBLUE}{1}{DEFAULT} выбрал {DARKBLUE}{2}{DEFAULT}"
+		"en"			"{DARKBLUE}{1}{DEFAULT} has selected {DARKBLUE}{2}{DEFAULT}"
+	}
+	
+	"No Votes"
+	{
+		"ru"			"Никто не участвовал в голосовании, остается текущая карта."
+		"en"			"No votes received for Rock the Vote, keeping current map."
+	}
+	
+	"Current Map Stays"
+	{
+		"ru"			"Голосование состоялось! Текущая карта продолжается!"
+		"en"			"Current map continues! Rock the Vote has spoken!"
+	}
+	
+	"Changing Maps"
+	{
+		"#format"		"{1:s}"
+		"ru"			"Голосование состоялось! Смена карты на {DARKBLUE}{1}{DEFAULT}!"
+		"en"			"Changing map to {DARKBLUE}{1}{DEFAULT}! Rock the Vote has spoken!"
+	}
+}

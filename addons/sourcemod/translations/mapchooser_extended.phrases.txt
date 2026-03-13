@@ -1,0 +1,150 @@
+// Здесь вы можите менять цвета а так же тег [SM]
+// Пример выглядеть снизу
+// Если нужна помощь заходи, помогу!
+// https://discord.gg/sR9YAaC
+//
+// CSS цвета - https://hlmod.ru/resources/more-colors.975/
+////////////////////////////////////////////////////////////
+// CSGO цвета ↓
+// {DARKRED} 
+// {LIGHTRED} 
+// {ORANGE} 
+// {YELLOW} 
+// {OLIVE} 
+// {LIGHTGREEN} 
+// {LIME} 
+// {GREEN} 
+// {DEFAULT} 
+// {GREY} 
+// {BLUEGREY} 
+// {BLUE} 
+// {LIGHTBLUE} 
+// {DARKBLUE} 
+// {ORCHID}
+
+"Phrases"
+{
+	"Nextmap Voting Started"
+	{
+		"ru"			"Голосование за следующую карту запущено."
+		"en"			"Voting for next map has started."
+	}	
+
+	"Nextmap Voting Finished"
+	{
+		"#format"		"{1:s},{2:i},{3:i}"
+		"ru"			"Голосование за карту завершено. Следующей картой будет: {DARKBLUE}{1}{DEFAULT}. (Получено {DARKBLUE}{2}%%{DEFAULT} из {DARKBLUE}{3}{DEFAULT} голосов(а))"
+		"en"			"Map voting has finished. The next map will be {DARKBLUE}{1}{DEFAULT}. (Received {DARKBLUE}{2}{DEFAULT}%% of {DARKBLUE}{3}{DEFAULT} votes)"
+	}
+
+	"Current Map Extended"
+	{
+		"#format"		"{1:i},{2:i}"
+		"ru"			"Текущая карта была продлена. (Получено {DARKBLUE}{1}%%{DEFAULT} из {DARKBLUE}{2}{DEFAULT} голосов(а))"
+		"en"			"The current map has been extended. (Received {DARKBLUE}{1}%%{DEFAULT} of {DARKBLUE}{2}{DEFAULT} votes)"
+	}
+
+	"Current Map Stays"
+	{
+		"#format"		"{1:i},{2:i}"
+		"ru"			"Текущая карта не сменится! (Получено {DARKBLUE}{1}%%{DEFAULT} из {DARKBLUE}{2}{DEFAULT} голосов(а))"
+		"en"			"Current map continues! The Vote has spoken! (Received {DARKBLUE}{1}%%{DEFAULT} of {DARKBLUE}{2}{DEFAULT} votes)"
+	}
+
+	"Changed Next Map"
+	{
+		"#format"		"{1:s}"
+		"ru"			"Следующая карта изменена на {DARKBLUE}\"{1}\"{DEFAULT}."	
+		"en"			"Changed nextmap to {DARKBLUE}\"{1}\"{DEFAULT}."	
+	}
+
+	"Number Of Votes"
+	{
+		"ru"			"Количество голосов"
+		"en"			"Number of votes"
+	}
+
+	"Revote Is Needed"
+	{
+		"#format"		"{1:i}"
+		"ru"			"Ни одна карта не получила более, чем {DARKBLUE}{1}%%{DEFAULT} голосов(а).\nИтак, какая карта будет следующей? Приготовьтесь к повторному голосованию!"
+		"en"			"No map has received more than {DARKBLUE}{1}%%{DEFAULT} of the vote.\nSo, which map will win? A revote is needed!"
+	}
+///////////////////////////////////// ↓ НЕ ДОБАВЛЯТЬ ЦВЕТА! ↓ /////////////////////////////////////
+//////////////////////////////////////////// ↓ Меню ↓ ////////////////////////////////////////////
+	"Vote Nextmap"
+	{
+		"ru"			"Голосование за следующую карту."
+		"en"			"Vote for the next map!"
+	}	
+	
+	"Extend Map"
+	{
+		"ru"			"Продлить текущую карту."
+		"en"			"Extend Current Map"
+	}
+
+	"Dont Change"
+	{
+		"ru"			"Не менять карту."
+		"en"			"Don't Change"
+	}
+
+	"Runoff Vote Nextmap"
+	{
+		"ru"			"Повторное голосование за карту."
+		"en"			"Runoff Vote for the next map!"
+	}	
+	
+	"Custom"	
+	{	
+		"#format"		"{1:s}"
+		"ru"			"{1} (Кастом)"
+		"en"			"{1} (Custom)"
+	}	
+	
+	"Revote Warning"	
+	{	
+		"#format"		"{1:i}"
+		"ru"			"Повторное голосование начнётся через: {1} сек."
+		"en"			"Runoff vote will start in: {1}s"
+	}	
+	
+	"Vote Warning"	
+	{	
+		"#format"		"{1:i}"
+		"ru"			"Внимание! Голосование за следующую карту начнётся через: {1} сек."
+		"en"			"Warning! Voting for the next map will begin in: {1}s"
+	}	
+	
+	"Line One"	
+	{	
+		"ru"			"Выбери, какая карта будет следующей..."
+		"en"			"Consider which map you want to play..."
+	}	
+	
+	"Line Two"	
+	{	
+		"ru"			"...и не клацай кнопки,не подумав ;-)"
+		"en"			"...and don't hit buttons thoughtlessly ;-)"
+	}
+
+	"Cannot Start Vote"
+	{
+		"#format"		"{1:i}"
+		"en"			"Vote already in progress.  Retrying in {1}s."
+	}	
+	
+	"Tie Vote"	
+	{	
+		"#format"		"{1:i}"
+		"en"			"The top {1} maps had the same number of votes.\nA revote is needed!"
+	}	
+	
+	"Custom Marked"	
+	{	
+		"#format"		"{1:s}"
+		"en"			"*{1}"
+	}
+
+}
