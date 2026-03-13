@@ -312,10 +312,9 @@ void ShowMatches(int client, char[] mapname)
 	char map[PLATFORM_MAX_PATH];
 	char lastMap[PLATFORM_MAX_PATH];
 
-	Handle excludeMaps = INVALID_HANDLE;
+	ArrayList excludeMaps = new ArrayList(ByteCountToCells(PLATFORM_MAX_PATH));
 	char currentMap[32];
 	
-	excludeMaps = CreateArray(ByteCountToCells(PLATFORM_MAX_PATH));
 	GetExcludeMapList(excludeMaps);
 
 	GetCurrentMap(currentMap, sizeof(currentMap));	
@@ -436,12 +435,12 @@ void BuildMapMenu()
 
 	char map[PLATFORM_MAX_PATH];
 	
-	Handle excludeMaps = INVALID_HANDLE;
+	ArrayList excludeMaps;
 	char currentMap[PLATFORM_MAX_PATH];
 	
 	if (GetConVarBool(g_Cvar_ExcludeOld))
 	{	
-		excludeMaps = CreateArray(ByteCountToCells(PLATFORM_MAX_PATH));
+		excludeMaps = new ArrayList(ByteCountToCells(PLATFORM_MAX_PATH));
 		GetExcludeMapList(excludeMaps);
 	}
 	

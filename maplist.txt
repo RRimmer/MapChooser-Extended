@@ -1,7 +1,7 @@
 //Здесь вы пишете карты которые добавили в папку /maps
 //Пример как должно выглядеть снизу
 // Если нужна помощь заходи, помогу!
-// https://discord.gg/sR9YAaC
+// https://discord.gg/tWGJnE3DVU
 de_mirage
 de_dust2
-de_hentai
+cs_office

@@ -1,9 +1,9 @@
-// Здесь вы можите менять цвета а так же тег [SM]
+// Здесь вы можите менять цвета а так же тег
 // Пример выглядеть снизу
 // Если нужна помощь заходи, помогу!
-// https://discord.gg/sR9YAaC
+// https://discord.gg/tWGJnE3DVU
 //
-// CSS цвета - https://hlmod.ru/resources/more-colors.975/
+// CSS цвета - https://hlmod.net/resources/more-colors.975/
 ////////////////////////////////////////////////////////////
 // CSGO цвета ↓
 // {DARKRED} 
@@ -51,8 +51,8 @@
 	"Already Voted"
 	{
  		"#format"		"{1:d},{2:d}"
-		"ru"			"Вы уже проголосовали за смену карты. ({DARKBLUE}{1}{DEFAULT} голосов из {DARKBLUE}{2}{DEFAULT} необходимых)"
-	 	"en"			"You have already voted to Rock the Vote. ({DARKBLUE}{1}{DEFAULT} votes, {DARKBLUE}{2}{DEFAULT} required)"
+		"ru"			"Вы уже проголосовали за смену карты. ({ORANGE}{1}{DARKBLUE} голосов из {ORANGE}{2}{DARKBLUE} необходимых)"
+	 	"en"			"You have already voted to Rock the Vote. ({ORANGE}{1}{DARKBLUE} votes, {ORANGE}{2}{DARKBLUE} required)"
 	}
 	
 	"Minimal Players Not Met"
@@ -64,8 +64,8 @@
 	"RTV Requested"
 	{
 		"#format"		"{1:s},{2:d},{3:d}"
-		"ru"			"Игрок {DARKBLUE}{1}{DEFAULT} хочет сменить карту. ({DARKBLUE}{2}{DEFAULT} голосов из {DARKBLUE}{3}{DEFAULT} необходимых)"
-		"en"			"{DARKBLUE}{1}{DEFAULT} wants to rock the vote. ({DARKBLUE}{2}{DEFAULT} votes, {DARKBLUE}{3}{DEFAULT} required)"
+		"ru"			"Игрок {ORANGE}{1}{DARKBLUE} хочет сменить карту. ({ORANGE}{2}{DARKBLUE} голосов из {ORANGE}{3}{DARKBLUE} необходимых)"
+		"en"			"{ORANGE}{1}{DARKBLUE} wants to rock the vote. ({ORANGE}{2}{DARKBLUE} votes, {ORANGE}{3}{DARKBLUE} required)"
 	}
 	
 	"RTV Vote Ready"
@@ -84,8 +84,8 @@
 	"Selected Map"
 	{
 		"#format"		"{1:s},{2:s}"
-		"ru"			"Игрок {DARKBLUE}{1}{DEFAULT} выбрал {DARKBLUE}{2}{DEFAULT}"
-		"en"			"{DARKBLUE}{1}{DEFAULT} has selected {DARKBLUE}{2}{DEFAULT}"
+		"ru"			"Игрок {ORANGE}{1}{DARKBLUE} выбрал {ORANGE}{2}{DARKBLUE}"
+		"en"			"{ORANGE}{1}{DARKBLUE} has selected {ORANGE}{2}{DARKBLUE}"
 	}
 	
 	"No Votes"
@@ -103,7 +103,7 @@
 	"Changing Maps"
 	{
 		"#format"		"{1:s}"
-		"ru"			"Голосование состоялось! Смена карты на {DARKBLUE}{1}{DEFAULT}!"
-		"en"			"Changing map to {DARKBLUE}{1}{DEFAULT}! Rock the Vote has spoken!"
+		"ru"			"Голосование состоялось! Смена карты на {ORANGE}{1}{DARKBLUE}!"
+		"en"			"Changing map to {ORANGE}{1}{DARKBLUE}! Rock the Vote has spoken!"
 	}
 }
